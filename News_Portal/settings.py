@@ -323,7 +323,7 @@ LOGGING = {
         },
         'django.request':{
             'handlers': ['Zadanie_№3_CRITICAL', 'Zadanie_№3_ERROR', 'Zadanie_№5_mail'],
-            'propagate': True,
+            'propagate': False,
 
         },
         'django.server': {
