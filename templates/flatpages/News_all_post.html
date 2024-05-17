@@ -1,0 +1,17 @@
+{% extends 'flatpages/default.html' %}
+{% load custom_filters %}
+<!-- Название у нас будет products -->
+{% block title %}
+News
+{% endblock title %}
+
+<!-- В контенте на странице мы выводим все товары -->
+{% block content %}
+<h1 xmlns="http://www.w3.org/1999/html"></h1>
+<table>
+<br><tr><h1>{{news.name|censor}}</h1></tr></br>
+<br><tr>{{news.text|censor}}</tr></br>
+<br><tr>{{news.time_in|date:'M d Y' }}</tr></br>
+<br><tr>{{news.news_or_art}}</tr></br>
+</table>
+{% endblock content %}
