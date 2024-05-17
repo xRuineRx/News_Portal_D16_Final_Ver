@@ -1,0 +1,201 @@
+C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\utils\log.py 2024-05-17 15:14:31,408 ERROR Internal Server Error: /news_or_art/create_news/ (<class 'django.db.utils.OperationalError'>, OperationalError('database is locked'), <traceback object at 0x000001BED7837380>)
+Traceback (most recent call last):
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\News_Portal\simpleapp\views.py", line 62, in form_valid
+    post.save()
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\db\models\base.py", line 1067, in _save_table
+    results = self._do_insert(
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\db\models\base.py", line 1108, in _do_insert
+    return manager._insert(
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\db\models\sql\compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: database is locked
+C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\core\servers\basehttp.py 2024-05-17 15:14:31,413 ERROR "POST /news_or_art/create_news/ HTTP/1.1" 500 181636 None
+C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\utils\log.py 2024-05-17 15:47:57,634 ERROR Internal Server Error: /news_or_art/create_news/ (<class 'django.contrib.auth.models.User.author.RelatedObjectDoesNotExist'>, RelatedObjectDoesNotExist('User has no author.'), <traceback object at 0x000002083D9B1F40>)
+Traceback (most recent call last):
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\News_Portal\simpleapp\views.py", line 61, in form_valid
+    post.link_Author = self.request.user.author
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\utils\functional.py", line 253, in inner
+    return func(_wrapped, *args)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\db\models\fields\related_descriptors.py", line 525, in __get__
+    raise self.RelatedObjectDoesNotExist(
+django.contrib.auth.models.User.author.RelatedObjectDoesNotExist: User has no author.
+C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\core\servers\basehttp.py 2024-05-17 15:47:57,644 ERROR "POST /news_or_art/create_news/ HTTP/1.1" 500 109760 None
+C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\utils\log.py 2024-05-17 15:50:18,517 ERROR Internal Server Error: /news_or_art/create_news/ (<class 'django.contrib.auth.models.User.author.RelatedObjectDoesNotExist'>, RelatedObjectDoesNotExist('User has no author.'), <traceback object at 0x000001580545FF40>)
+Traceback (most recent call last):
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\News_Portal\simpleapp\views.py", line 61, in form_valid
+    post.link_Author = self.request.user.author
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\utils\functional.py", line 253, in inner
+    return func(_wrapped, *args)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\db\models\fields\related_descriptors.py", line 525, in __get__
+    raise self.RelatedObjectDoesNotExist(
+django.contrib.auth.models.User.author.RelatedObjectDoesNotExist: User has no author.
+C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\core\servers\basehttp.py 2024-05-17 15:50:19,398 ERROR "POST /news_or_art/create_news/ HTTP/1.1" 500 109757 None
+C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\utils\log.py 2024-05-17 16:00:39,252 ERROR Internal Server Error: /news_or_art/create_news/ (<class 'django.contrib.auth.models.User.author.RelatedObjectDoesNotExist'>, RelatedObjectDoesNotExist('User has no author.'), <traceback object at 0x000001DAD1D5D780>)
+Traceback (most recent call last):
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\News_Portal\simpleapp\views.py", line 61, in form_valid
+    post.link_Author = self.request.user.author
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\utils\functional.py", line 253, in inner
+    return func(_wrapped, *args)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\db\models\fields\related_descriptors.py", line 525, in __get__
+    raise self.RelatedObjectDoesNotExist(
+django.contrib.auth.models.User.author.RelatedObjectDoesNotExist: User has no author.
+C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\core\servers\basehttp.py 2024-05-17 16:00:39,262 ERROR "POST /news_or_art/create_news/ HTTP/1.1" 500 109597 None
+C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\utils\log.py 2024-05-17 16:08:35,434 ERROR Internal Server Error: /news_or_art/create_news/ (<class 'django.contrib.auth.models.User.author.RelatedObjectDoesNotExist'>, RelatedObjectDoesNotExist('User has no author.'), <traceback object at 0x00000191B5CC29C0>)
+Traceback (most recent call last):
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\News_Portal\simpleapp\views.py", line 61, in form_valid
+    post.link_Author = self.request.user.author
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\utils\functional.py", line 253, in inner
+    return func(_wrapped, *args)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\db\models\fields\related_descriptors.py", line 525, in __get__
+    raise self.RelatedObjectDoesNotExist(
+django.contrib.auth.models.User.author.RelatedObjectDoesNotExist: User has no author.
+C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\core\servers\basehttp.py 2024-05-17 16:08:35,444 ERROR "POST /news_or_art/create_news/ HTTP/1.1" 500 109768 None
+C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\utils\log.py 2024-05-17 16:10:27,272 ERROR Internal Server Error: /news_or_art/create_news/ (<class 'django.contrib.auth.models.User.author.RelatedObjectDoesNotExist'>, RelatedObjectDoesNotExist('User has no author.'), <traceback object at 0x000001F0FB5FD6C0>)
+Traceback (most recent call last):
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\News_Portal\simpleapp\views.py", line 61, in form_valid
+    post.link_Author = self.request.user.author
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\utils\functional.py", line 253, in inner
+    return func(_wrapped, *args)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\db\models\fields\related_descriptors.py", line 525, in __get__
+    raise self.RelatedObjectDoesNotExist(
+django.contrib.auth.models.User.author.RelatedObjectDoesNotExist: User has no author.
+C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\core\servers\basehttp.py 2024-05-17 16:10:27,280 ERROR "POST /news_or_art/create_news/ HTTP/1.1" 500 109746 None
+C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\utils\log.py 2024-05-17 16:14:21,303 ERROR Internal Server Error: /news_or_art/create_news/ (<class 'django.contrib.auth.models.User.author.RelatedObjectDoesNotExist'>, RelatedObjectDoesNotExist('User has no author.'), <traceback object at 0x000001C0D7C0EE40>)
+Traceback (most recent call last):
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\News_Portal\simpleapp\views.py", line 61, in form_valid
+    post.link_Author = self.request.user.author
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\utils\functional.py", line 253, in inner
+    return func(_wrapped, *args)
+  File "C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\db\models\fields\related_descriptors.py", line 525, in __get__
+    raise self.RelatedObjectDoesNotExist(
+django.contrib.auth.models.User.author.RelatedObjectDoesNotExist: User has no author.
+C:\Users\ilyas\OneDrive\Рабочий стол\Python\Django_News_Portal\NewsPortal\lib\site-packages\django\core\servers\basehttp.py 2024-05-17 16:14:22,007 ERROR "POST /news_or_art/create_news/ HTTP/1.1" 500 109757 None
